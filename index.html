@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d2b">
+  <meta name="description" content="Roof repairs, roof replacement and inspections. Request a clear, no-pressure roofing estimate.">
+  <title>Zaid Khan Roofing Solutions | Built to Protect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#101d2b;--navy2:#172a3c;--gold:#f3b84b;--paper:#f6f5f1;--ink:#172331;--muted:#65717c;--line:#e4e5e2;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    h1,h2,h3,.brand{font-family:Manrope,sans-serif;line-height:1.12;letter-spacing:-.035em}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{background:#0b1520;color:#dbe2e9;font-size:12px;padding:9px 0}
+    .topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #eceeeb}
+    nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-size:17px;font-weight:800;display:flex;align-items:center;gap:10px}
+    .roofmark{width:38px;height:38px;border-radius:10px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:22px}
+    .navlinks{display:flex;align-items:center;gap:27px;font-size:13px;font-weight:700}
+    .navlinks a:hover{color:#a46b0b}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 20px;border-radius:6px;background:var(--gold);color:#182330;font-weight:800;font-size:13px;border:0;cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(.97)}
+    .btn.dark{background:var(--navy);color:#fff}
+    .btn.outline{background:transparent;border:1px solid #aab3ba;color:#fff}
+    .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0 0 0 48%;background:linear-gradient(90deg,var(--navy),#101d2b44),url("https://images.unsplash.com/photo-1635424710928-2b5f3a3f3d12?auto=format&fit=crop&w=1400&q=85") center/cover no-repeat;opacity:.8}
+    .hero:after{content:"";position:absolute;width:500px;height:500px;border:1px solid #ffffff12;border-radius:50%;right:-150px;top:-240px;box-shadow:0 0 0 65px #ffffff08,0 0 0 130px #ffffff05}
+    .hero-grid{position:relative;z-index:1;min-height:570px;display:grid;grid-template-columns:1.05fr .75fr;align-items:center;gap:42px;padding-top:60px;padding-bottom:60px}
+    .eyebrow{display:flex;align-items:center;gap:10px;color:var(--gold);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.17em}
+    .eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}
+    h1{font-size:clamp(42px,5.5vw,70px);margin:22px 0;max-width:680px}
+    h1 span{color:var(--gold)}
+    .hero p{color:#d0d9e1;max-width:520px;font-size:16px;line-height:1.8}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}
+    .microtrust{display:flex;gap:20px;flex-wrap:wrap;color:#d8e0e7;font-size:12px}
+    .microtrust span:before{content:"✓";color:var(--gold);font-weight:900;margin-right:7px}
+    .estimate-card{background:#fff;color:var(--ink);padding:27px;border-radius:10px;box-shadow:0 25px 80px #0003;max-width:390px;justify-self:end;width:100%}
+    .estimate-card .smallcap{font-size:10px;font-weight:800;letter-spacing:.14em;color:#99701f;text-transform:uppercase}
+    .estimate-card h2{font-size:25px;margin:8px 0}
+    .estimate-card p{color:var(--muted);font-size:12px;margin:0 0 20px}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
+    .field label{font-size:11px;font-weight:700}
+    .field input,.field select,.field textarea{width:100%;border:1px solid #dfe3e4;border-radius:5px;padding:12px;background:#fff;color:var(--ink);outline:none}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:#c18a2b;box-shadow:0 0 0 3px #f3b84b25}
+    .estimate-card .btn{width:100%;margin-top:3px}
+    .fineprint{font-size:10px!important;text-align:center;margin:12px 0 0!important}
+    .strip{border-bottom:1px solid var(--line);background:#fff}
+    .stripgrid{display:grid;grid-template-columns:repeat(4,1fr);padding:23px 0;gap:18px}
+    .stripitem{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:800}
+    .stripicon{width:38px;height:38px;border-radius:50%;background:#f8f0df;color:#916318;display:grid;place-items:center;font-size:18px;flex-shrink:0}
+    section{padding:88px 0}
+    .sectionhead{max-width:640px;margin-bottom:35px}
+    .sectionhead h2{font-size:clamp(30px,4vw,46px);margin:14px 0}
+    .sectionhead p{color:var(--muted);margin:0}
+    .services{background:var(--paper)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service{background:#fff;border:1px solid #e7e6e0;border-radius:9px;padding:28px;display:flex;flex-direction:column;min-height:260px;transition:.2s}
+    .service:hover{transform:translateY(-4px);box-shadow:0 14px 35px #1723310c}
+    .service .number{font-size:11px;color:#a16e19;font-weight:800;letter-spacing:.12em}
+    .service h3{font-size:22px;margin:22px 0 10px}
+    .service p{font-size:13px;color:var(--muted);margin:0 0 24px}
+    .textlink{font-weight:800;font-size:12px;margin-top:auto;display:inline-flex;gap:8px;align-items:center}
+    .textlink:hover{color:#a16e19}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+    .visual{min-height:420px;background:linear-gradient(0deg,#101d2b88,#101d2b08),url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1100&q=85") center/cover;border-radius:10px;position:relative}
+    .visual-note{position:absolute;left:20px;bottom:20px;background:#fff;padding:18px 22px;border-radius:7px;max-width:250px;box-shadow:0 10px 30px #0002}
+    .visual-note strong{display:block;font:800 14px Manrope}
+    .visual-note span{font-size:11px;color:var(--muted)}
+    .checklist{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin:28px 0}
+    .check{font-size:12px;font-weight:700;display:flex;gap:10px;align-items:flex-start}
+    .check i{font-style:normal;background:#f7edd8;color:#8e6217;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+    .muted{color:var(--muted)}
+    .finance{background:var(--navy2);color:#fff}
+    .finance .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .finance h2{font-size:clamp(28px,4vw,42px);max-width:640px;margin:14px 0}
+    .finance p{color:#c8d2dc;max-width:620px}
+    .pricegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .price{border:1px solid var(--line);border-radius:9px;padding:27px;display:flex;flex-direction:column}
+    .price.featured{border:2px solid var(--gold);background:#fffdf8}
+    .tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:#9c6b16}
+    .price h3{font-size:22px;margin:13px 0}
+    .amount{font:800 31px Manrope;letter-spacing:-.04em;margin:5px 0}
+    .amount small{font:500 12px "DM Sans";letter-spacing:0;color:var(--muted)}
+    .price p{font-size:12px;color:var(--muted);min-height:45px}
+    .price ul{padding-left:18px;color:#4e5b65;font-size:12px;line-height:2.1;margin-bottom:24px}
+    .price .btn{width:100%;margin-top:auto}
+    .note{font-size:11px;color:var(--muted);margin-top:18px}
+    .reviews{background:var(--paper)}
+    .reviewgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .review{background:#fff;border:1px solid #e8e6df;border-radius:8px;padding:24px}
+    .review .stars{color:#ba8427;letter-spacing:3px}
+    .review p{font-size:13px;color:#5b6771}
+    .review strong{font-size:12px}
+    .review small{display:block;color:#87919a;font-size:10px;margin-top:4px}
+    .review-disclaimer{font-size:11px;color:var(--muted);margin-top:15px}
+    .servicearea{background:#fff}
+    .area-panel{background:var(--paper);padding:30px;border-radius:10px;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+    .area-panel h3{font-size:24px;margin:0 0 10px}
+    .area-panel p{font-size:13px;color:var(--muted)}
+    .area-placeholder{border:1px dashed #c9c9c1;border-radius:8px;padding:24px;text-align:center;color:#66717a;font-size:12px}
+    .faq{max-width:800px}
+    details{border-bottom:1px solid var(--line);padding:18px 0}
+    summary{font-weight:800;font-size:14px;cursor:pointer}
+    details p{font-size:13px;color:var(--muted)}
+    .finalcta{background:var(--gold);padding:55px 0}
+    .finalcta .wrap{display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .finalcta h2{font-size:clamp(28px,4vw,40px);margin:0 0 8px}
+    .finalcta p{margin:0;color:#59451f;font-size:13px}
+    footer{background:#0b1520;color:#cbd3dc;padding:50px 0 25px}
+    .footgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:35px}
+    footer h3{font-size:13px;color:#fff;letter-spacing:0}
+    footer p,footer a{font-size:12px;color:#aab6c1}
+    .footlinks{display:grid;gap:9px}
+    .copyright{border-top:1px solid #ffffff18;margin-top:35px;padding-top:18px;font-size:10px;color:#84919c}
+    .status{font-size:12px;margin-top:10px;color:#72500f}
+    @media(max-width:850px){.navlinks{gap:14px}.navlinks a:not(.btn){display:none}.hero:before{inset:0;background:linear-gradient(90deg,#101d2bf5,#101d2bba),url("https://images.unsplash.com/photo-1635424710928-2b5f3a3f3d12?auto=format&fit=crop&w=1400&q=85") center/cover}.hero-grid{grid-template-columns:1fr;gap:28px}.estimate-card{justify-self:start;max-width:500px}.stripgrid{grid-template-columns:repeat(2,1fr)}.split{gap:30px}.cards,.pricegrid,.reviewgrid{grid-template-columns:1fr 1fr}.finance .wrap{align-items:flex-start;flex-direction:column}.visual{min-height:330px}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}nav{height:68px}.brand{font-size:14px}.roofmark{width:33px;height:33px}.navlinks .btn{padding:11px 12px;font-size:11px}.hero-grid{padding-top:48px;padding-bottom:44px;min-height:unset}h1{font-size:43px}.hero p{font-size:14px}.actions .btn{width:100%}.microtrust{gap:10px;display:grid}.stripgrid{gap:14px}.stripitem{font-size:10px;gap:8px}.stripicon{width:32px;height:32px}section{padding:62px 0}.cards,.pricegrid,.reviewgrid{grid-template-columns:1fr}.service{min-height:unset}.split{grid-template-columns:1fr}.visual{min-height:270px;order:2}.checklist{grid-template-columns:1fr}.area-panel{grid-template-columns:1fr;padding:22px}.finalcta .wrap{align-items:flex-start;flex-direction:column}.footgrid{grid-template-columns:1fr;gap:18px}.topbar .wrap{font-size:10px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>ROOFING CARE FOR YOUR HOME</span><span>Clear estimates · Thoughtful workmanship · No-pressure guidance</span></div></div>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home"><span class="roofmark">⌂</span><span>ZAID KHAN<br><span style="font-size:10px;letter-spacing:.13em;color:#7b858d">ROOFING SOLUTIONS</span></span></a>
+      <div class="navlinks"><a href="#services">Services</a><a href="#process">Our process</a><a href="#pricing">Pricing</a><a class="btn" href="#estimate">Request estimate ↗</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" style="padding:0">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Roofing, made straightforward</div>
+          <h1>A stronger roof.<br><span>A more secure home.</span></h1>
+          <p>From a small leak to a full roof replacement, get clear next steps, a transparent estimate, and roofing options built around your property.</p>
+          <div class="actions"><a class="btn" href="#estimate">Get a roofing estimate ↗</a><a class="btn outline" href="#services">Explore services</a></div>
+          <div class="microtrust"><span>Repair and replacement options</span><span>Inspection-first recommendations</span><span>Clear scope before work begins</span></div>
+        </div>
+        <div class="estimate-card" id="estimate">
+          <div class="smallcap">Start with a conversation</div>
+          <h2>Tell us about your roof.</h2>
+          <p>Share a few details and prepare a request for the roofing team.</p>
+          <form id="estimateForm">
+            <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Full name" required></div>
+            <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+            <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" autocomplete="tel" placeholder="Best contact number" required></div>
+            <div class="field"><label for="service">What do you need?</label><select id="service" name="service" required><option value="">Choose a service</option><option>Roof inspection</option><option>Roof repair</option><option>Roof replacement</option><option>Storm or leak assessment</option><option>Not sure yet</option></select></div>
+            <div class="field"><label for="details">Property ZIP code and details</label><textarea id="details" name="details" rows="2" placeholder="ZIP code, issue, and preferred timing" required></textarea></div>
+            <button class="btn" type="submit">Prepare estimate request →</button>
+            <div class="status" id="formStatus" role="status"></div>
+            <p class="fineprint">No payment is taken by this form. Final submission requires the business lead endpoint to be configured.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip"><div class="wrap stripgrid">
+      <div class="stripitem"><span class="stripicon">⌕</span><span>Inspection-led<br>recommendations</span></div>
+      <div class="stripitem"><span class="stripicon">↗</span><span>Clear project<br>scope and pricing</span></div>
+      <div class="stripitem"><span class="stripicon">⌂</span><span>Repair to full<br>replacement</span></div>
+      <div class="stripitem"><span class="stripicon">✓</span><span>Respect for your<br>home and time</span></div>
+    </div></div>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="sectionhead"><div class="eyebrow">What we do</div><h2>Roofing help for every stage.</h2><p>Understand the condition of your roof, fix the problem, or plan a replacement with a clear scope of work.</p></div>
+        <div class="cards">
+          <article class="service"><div class="number">01 / INSPECT</div><h3>Roof inspections</h3><p>Get a closer look at visible wear, possible leak points, flashing, and areas that may need attention.</p><a class="textlink" href="#pricing">Explore inspection options <span>→</span></a></article>
+          <article class="service"><div class="number">02 / REPAIR</div><h3>Roof repairs</h3><p>Address leaks, damaged shingles, flashing issues, and other roof concerns with a scoped repair plan.</p><a class="textlink" href="#estimate">Discuss a repair <span>→</span></a></article>
+          <article class="service"><div class="number">03 / REPLACE</div><h3>Roof replacement</h3><p>Plan a roof replacement with material options, project milestones, and an estimate tailored to the property.</p><a class="textlink" href="#estimate">Plan a replacement <span>→</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap split">
+        <div class="visual"><div class="visual-note"><strong>Know the next step.</strong><span>Clear communication from the first request to the project plan.</span></div></div>
+        <div>
+          <div class="eyebrow">A simpler process</div><h2 style="font-size:clamp(30px,4vw,45px);margin:16px 0">No guesswork. Just a clear plan.</h2>
+          <p class="muted">Roofing decisions can feel overwhelming. The goal is to help you understand the issue and the available options before you commit to a project.</p>
+          <div class="checklist">
+            <div class="check"><i>1</i><span>Tell us what you have noticed</span></div>
+            <div class="check"><i>2</i><span>Arrange an inspection or assessment</span></div>
+            <div class="check"><i>3</i><span>Review the recommended scope</span></div>
+            <div class="check"><i>4</i><span>Approve the plan before work starts</span></div>
+          </div>
+          <a class="btn dark" href="#estimate">Start your request ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="finance">
+      <div class="wrap"><div><div class="eyebrow">Plan with confidence</div><h2>Explore payment options for larger projects.</h2><p>For qualifying roof repairs or replacements, ask about available financing options, eligibility, terms, and total cost before making a decision.</p></div><a class="btn" href="#estimate">Ask about financing ↗</a></div>
+    </section>
+
+    <section id="pricing">
+      <div class="wrap">
+        <div class="sectionhead"><div class="eyebrow">Straightforward starting points</div><h2>Choose where to start.</h2><p>These are proposed offer structures. Confirm final prices, scope, service area, and Whop checkout plans before accepting payment.</p></div>
+        <div class="pricegrid">
+          <article class="price"><div class="tag">Start here</div><h3>Roof inspection</h3><div class="amount">$149 <small>/ proposed flat fee</small></div><p>A focused inspection appointment to assess visible roof concerns.</p><ul><li>Inspection appointment</li><li>Visible concern review</li><li>Recommended next steps</li></ul><a class="btn dark checkout-link" href="#estimate" data-offer="inspection">Request inspection ↗</a></article>
+          <article class="price featured"><div class="tag">Project kickoff</div><h3>Roofing project deposit</h3><div class="amount">$500 <small>/ proposed deposit</small></div><p>A proposed deposit toward an approved roofing project.</p><ul><li>Applied to an agreed project</li><li>Scope confirmed in writing</li><li>Balance and terms disclosed first</li></ul><a class="btn checkout-link" href="#estimate" data-offer="deposit">Discuss a deposit ↗</a></article>
+          <article class="price"><div class="tag">Defined scope</div><h3>Flat-rate roof service</h3><div class="amount">Quoted <small>/ by scope</small></div><p>A fixed price for a specific, agreed service—not an open-ended estimate.</p><ul><li>Written service description</li><li>Price confirmed before purchase</li><li>Exclusions disclosed upfront</li></ul><a class="btn dark checkout-link" href="#estimate" data-offer="flat-rate">Request service quote ↗</a></article>
+        </div>
+        <p class="note">Pricing is illustrative until confirmed by the business. Do not submit payment until the corresponding Whop plan, terms, cancellation policy, and checkout flow have been configured.</p>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="wrap">
+        <div class="sectionhead"><div class="eyebrow">Built on trust</div><h2>Good work starts with clear expectations.</h2><p>Our service approach is centered on communication, scope clarity, and helping property owners make informed decisions.</p></div>
+        <div class="reviewgrid">
+          <article class="review"><div class="stars">✓ ✓ ✓</div><h3>Clear communication</h3><p>Understand what was observed, what is recommended, and which items may need attention first.</p><strong>Know what comes next</strong></article>
+          <article class="review"><div class="stars">✓ ✓ ✓</div><h3>Written scope</h3><p>Review the proposed work, price, exclusions, and payment milestones before authorizing a project.</p><strong>Know what is included</strong></article>
+          <article class="review"><div class="stars">✓ ✓ ✓</div><h3>Respect for your property</h3><p>Discuss access, scheduling, site protection, and cleanup expectations before work begins.</p><strong>Plan the work together</strong></article>
+        </div>
+        <p class="review-disclaimer">Verified customer reviews, licensing details, insurance information, and local references should be added here once supplied by the business. No customer testimonials or ratings have been fabricated.</p>
+      </div>
+    </section>
+
+    <section class="servicearea">
+      <div class="wrap"><div class="area-panel"><div><div class="eyebrow">Service area</div><h3>Is your property in our coverage area?</h3><p>Share your ZIP code in the estimate form so the team can confirm whether your property is within the service area before scheduling.</p><a class="btn dark" href="#estimate">Check coverage ↗</a></div><div class="area-placeholder">Service ZIP codes and coverage map<br><strong>Business details needed to complete this section</strong></div></div></div>
+    </section>
+
+    <section>
+      <div class="wrap faq"><div class="sectionhead"><div class="eyebrow">Common questions</div><h2>Before you book.</h2></div>
+        <details><summary>Do I need an inspection before a repair?</summary><p>An inspection or assessment helps establish the visible issue and recommended scope. The team should confirm what is needed for your specific roof.</p></details>
+        <details><summary>Is the $149 inspection price final?</summary><p>$149 is a proposed starting price for this website draft. Confirm the service area, inclusions, taxes, and appointment terms before enabling checkout.</p></details>
+        <details><summary>Can I finance a roof replacement?</summary><p>Financing may depend on availability and eligibility. Ask the business for current options, APR, fees, payment terms, and the total amount payable.</p></details>
+        <details><summary>When will I receive an estimate?</summary><p>Timing depends on the location, property details, and whether an on-site assessment is required. Submit your details so the team can advise you.</p></details>
+      </div>
+    </section>
+
+    <section class="finalcta"><div class="wrap"><div><h2>Let's take a look at your roof.</h2><p>Start with a few details. We will need to confirm service coverage and contact arrangements.</p></div><a class="btn dark" href="#estimate">Request an estimate ↗</a></div></section>
+  </main>
+
+  <footer>
+    <div class="wrap"><div class="footgrid">
+      <div><a class="brand" href="#home" style="color:#fff"><span class="roofmark">⌂</span><span>ZAID KHAN<br><span style="font-size:10px;letter-spacing:.13em;color:#aab6c1">ROOFING SOLUTIONS</span></span></a><p>Roof repair, replacement, and inspection options with a focus on clarity and informed decisions.</p></div>
+      <div><h3>Explore</h3><div class="footlinks"><a href="#services">Services</a><a href="#process">Our process</a><a href="#pricing">Pricing</a><a href="#estimate">Request estimate</a></div></div>
+      <div><h3>Contact</h3><p>Contact details will be published after the business confirms its phone number, email, and service area.</p><a href="#estimate">Send an estimate request →</a></div>
+    </div><div class="copyright">© <span id="year"></span> Zaid Khan Roofing Solutions. Website draft — business details and payment setup pending verification.</div></div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.querySelectorAll(".checkout-link").forEach(link => {
+      link.addEventListener("click", () => {
+        const offer = link.dataset.offer || "roofing";
+        const formService = document.getElementById("service");
+        if (offer === "inspection") formService.value = "Roof inspection";
+        if (offer === "deposit" || offer === "flat-rate") formService.value = "Roof replacement";
+      });
+    });
+
+    document.getElementById("estimateForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const status = document.getElementById("formStatus");
+      const form = new FormData(event.currentTarget);
+      const payload = Object.fromEntries(form.entries());
+      status.textContent = "Preparing your request…";
+
+      // Intentionally fail closed: no fake success while the Whop Leads API
+      // endpoint has not been configured.
+      fetch("/api/estimate", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify(payload)
+      }).then(async response => {
+        if (!response.ok) throw new Error("Lead endpoint is not configured yet.");
+        status.textContent = "Request received. The team will follow up using your contact details.";
+        event.currentTarget.reset();
+      }).catch(() => {
+        status.textContent = "The estimate form is ready, but online submission is not connected yet. Please contact the business directly once contact details are published.";
+      });
+    });
+  </script>
+</body>
+</html>
