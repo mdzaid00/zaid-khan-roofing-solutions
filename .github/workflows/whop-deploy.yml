@@ -1,0 +1,102 @@
+name: Deploy Roofing Website to Whop
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "package.json"
+      - "package-lock.json"
+      - "vite.config.js"
+      - "whop-app/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: whop-production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Whop CLI
+        run: npm install -g @whop/cli@0.28.0
+
+      - name: Check credential
+        env:
+          WHOP_API_KEY: ${{ secrets.WHOP_API_KEY }}
+        run: |
+          test -n "$WHOP_API_KEY" || {
+            echo "Missing WHOP_API_KEY GitHub secret"
+            exit 1
+          }
+
+      - name: Create Whop scaffold if needed
+        if: ${{ !hashFiles('whop-app/whop.app.json') }}
+        env:
+          WHOP_API_KEY: ${{ secrets.WHOP_API_KEY }}
+        run: |
+          whop apps init \
+            --app app_vxPorZwIveLbfo \
+            --dir ./whop-app
+
+          mkdir -p whop-app/public
+          cp index.html whop-app/public/roofing.html
+
+          test -f whop-app/src/routes/index.tsx || {
+            echo "Expected TanStack index route not found"
+            find whop-app -maxdepth 4 -type f \
+              -not -path '*/node_modules/*'
+            exit 1
+          }
+
+          cat > whop-app/src/routes/index.tsx <<'EOF'
+          import { createFileRoute } from '@tanstack/react-router'
+
+          function RoofingHome() {
+            return (
+              <iframe
+                src="/roofing.html"
+                title="Zaid Khan Roofing Solutions"
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  height: '100vh',
+                  border: 0
+                }}
+              />
+            )
+          }
+
+          export const Route = createFileRoute('/')({
+            component: RoofingHome,
+          })
+          EOF
+
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+          git add whop-app
+          git commit -m "Add Whop hosting scaffold" || true
+          git push
+
+      - name: Deploy to Whop
+        env:
+          WHOP_API_KEY: ${{ secrets.WHOP_API_KEY }}
+        run: |
+          whop apps deploy \
+            --dir ./whop-app \
+            --app app_vxPorZwIveLbfo
